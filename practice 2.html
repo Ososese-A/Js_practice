@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <form action="">
+        <h1>This is for the form</h1>
+        <p id="type" style="border: 1px solid black;height: 64px; width: 320px;background-color: black;color: white;"></p>
+        <label for="user">User:</label>
+        <input type="text" name="user" id="user">
+    </form>
+    <script>
+        const type = document.getElementById("type")
+        const user = document.querySelector("#user")
+
+        user.onkeyup = function () {
+            type.innerHTML = "User is Typing..."
+        }
+    </script>
+</body>
+</html>

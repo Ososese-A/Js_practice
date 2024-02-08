@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border: 1px  solid red;
+            height: 500vh;
+        }
+    </style>
+</head>
+<body id="body">
+    <script>
+        window.onscroll = function() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTrigger = 500; 
+
+    if (scrollPosition >= scrollTrigger) {
+        myFunction(); 
+    }
+
+    };
+    
+    function myFunction() {
+        const bod = document.querySelector("#body");
+        bod.style.background = "red";
+        console.log("User has scrolled to the specified point on the page!");
+    }
+    </script>
+</body>
+</html>

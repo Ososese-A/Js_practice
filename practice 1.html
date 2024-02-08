@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cook {
+            border: 1px solid black;
+            width: 320px;
+            height: 200px;
+            border-radius: 32px;
+            padding: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>We are making Cookies My people !!!</h1>
+    <h2 class="denial"></h2>
+    <div class="cook">
+            <p>It is I Mr Cookies</p> 
+        <div class="btns">
+            <button id="apt">Accept</button>
+            <button id="dny">Deny</button>
+        </div>
+    </div>
+    <script>
+        const accept = document.getElementById('apt');
+        const deny = document.getElementById('dny');
+        const cookieBox = document.querySelector('.cook');
+        const denialText = document.querySelector('.denial');
+
+        accept.onclick = function() {
+            cookieBox.style.display = "none";
+            denialText.innerHTML = "Bye Bye"
+        }
+
+        deny.onclick = function() {
+            denialText.innerHTML = "YOU MUST ACCEPT !!!"
+        }
+    </script>
+</body>
+</html>

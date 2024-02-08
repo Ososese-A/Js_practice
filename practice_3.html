@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hello {
+            background-color: #fb8500;
+            color: #1a1a1a;
+            font-size: 56px;
+        }
+        .low {
+            background-color: #00ff00;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello" id="idea">
+        <p>It is I "Hello"</p>
+    </div>
+    <div class="low" id="brow">
+        <p>It's just me here chilling on the low</p>
+    </div>
+
+    <button id="switch">Switch them</button>
+    <input type="text" name="field" id="field_id" value="Nemesis" placeholder="Names">
+    <button class="meme" href="" style="text-decoration: none; color: red; background: #1a1a1a; padding: 10px 24px; border: #00ff00 3px solid;">Change it</button>
+
+    <input type="text" name="password" id="password" placeholder="Passowrd">
+    <p class="inner"></p>
+
+    <script>
+        const password = document.getElementById("password")
+        const inner = document.querySelector(".inner")
+
+        password.onkeyup = () => {
+            if (password.value != null) {
+                password.style.background= "red";
+            } 
+            if (password.value == null) {
+                password.style.background= "white";
+            }
+
+            // console.log(password.value);
+            inner.innerHTML = password.value;
+
+        }
+
+
+
+        const hello = document.querySelector(".hello");
+        const low = document.querySelector(".low");
+        const switcher = document.getElementById("switch");
+
+        switcher.onclick = () => {
+            // hello.classList.remove("hello");
+            // hello.classList.add("low");
+            hello.classList.replace("hello","low");
+        }
+
+        
+
+
+        // Get the element
+        const field_id = document.getElementById("field_id");
+        const meme = document.querySelector(".meme");
+        const oldValue = field_id.getAttribute("value");
+        const oldValueValue = field_id.getAttribute("value").valueOf();
+        console.log(oldValueValue)
+
+        meme.onclick = () => {
+        // field_id.removeAttribute("value").valueOf();
+        field_id.setAttribute("required", "");
+        field_id.removeAttribute("value");
+        }
+    </script>
+</body>
+</html>
